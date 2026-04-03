@@ -26,7 +26,7 @@ module shiftRows (
     // Row 3: Left Shift by 3 Bytes, 12, 13, and 14 fall off from the left and mpve in from the right
     assign data_out[103:96]  = data_in[127:120]; // Byte 15 moves to 12
     assign data_out[111:104] = data_in[103:96];  // Byte 12 moves to 13
-    assign spy_out[119:112] = data_in[111:104]; // Byte 13 moves to 14
+    assign data_out[119:112] = data_in[111:104]; // Byte 13 moves to 14
     assign data_out[127:120] = data_in[119:112]; // Byte 14 moves to 15
 
 endmodule
